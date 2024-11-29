@@ -1,0 +1,106 @@
+/* Estilos base */
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .h1{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .Navegación {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: none; /* Oculto por defecto */
+  }
+  
+  .barra {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+  
+  .contenido {
+    margin-left: 220px;
+  }
+  
+  .texto {
+    font-size: 16px;
+  }
+  
+  .list-item {
+    margin: 10px 0;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  /* 1. Cambiar el color de fondo para pantallas grandes */
+@media (min-width: 960px) {
+    body {
+        background-color: #333; /* Fondo oscuro */
+        color: #fff; /* Texto claro */
+    }
+}
+
+/* 2. Ajustar el tamaño de la fuente para pantallas pequeñas */
+@media (max-width: 600px) {
+    .texto {
+        font-size: 18px; /* Aumentar tamaño de la fuente */
+    }
+}
+
+/* 3. Esconder elementos en orientación vertical */
+@media (orientation: portrait) {
+    .barra {
+        display: none; /* Ocultar barra lateral */
+    }
+}
+
+/* 4. Mostrar elementos en orientación horizontal */
+@media (orientation: landscape) {
+    .Navegación {
+        display: block; /* Mostrar barra de navegación */
+    }
+}
+
+/* 5. Cambiar el diseño de columnas con Flexbox para pantallas pequeñas */
+@media (max-width: 768px) {
+    .h1 {
+        flex-direction: column;
+        align-items: center; /* Alinear los elementos al centro */
+    }
+
+    .contenido {
+        margin-left: 0;
+    }
+}
+
+/* 6. Aumentar el espacio entre elementos en pantallas grandes */
+@media (min-width: 1200px) {
+    .list-item {
+        margin: 20px 0; /* Aumentar el margen entre elementos */
+    }
+}
+
+/* 7. Cambiar la tipografía para títulos en pantallas pequeñas */
+@media (max-width: 576px) {
+    h1, h2 {
+        font-family: 'Arial', sans-serif; /* Cambiar la fuente a algo más legible */
+    }
+}
+
+/* 8. Ajustar el tamaño de imágenes para pantallas pequeñas */
+@media (max-width: 480px) {
+    img {
+        width: 100%; /* Adaptar imagen al ancho */
+        max-width: 300px; /* Limitar el tamaño máximo */
+    }
+}
+  

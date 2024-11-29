@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 Plugins de jQuery</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+</head>
+<body>
+    <h1>Implementación de Plugins jQuery</h1>
+
+    <div class="carousel owl-carousel">
+        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Paisaje 1">
+        <img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Paisaje 2">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Paisaje 3">
+    </div>
+
+    <div class="parallax">
+        Fondo con Efecto Parallax
+    </div>
+
+    <div class="gallery">
+        <a href="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1200" data-lightbox="image-gallery" data-title="Imagen 1">
+            <img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200" alt="Miniatura 1">
+        </a>
+        <a href="https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1200" data-lightbox="image-gallery" data-title="Imagen 2">
+            <img src="https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=200" alt="Miniatura 2">
+        </a>
+    </div>
+
+    <div class="slider">
+        <div>
+            <img src="https://images.unsplash.com/photo-1574169208507-843761748a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Slider 1">
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1528356863296-0c5ad863ff35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Slider 2">
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1574502213073-7db5a5eb07de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Slider 3">
+        </div>
+    </div>
+
+    <button class="whatsapp-button" onclick="openWhatsApp()">
+        <img src="images/Whatsapp-logo.png" alt="WhatsApp">
+    </button>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+>
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                nav: true
+            });
+
+            $(".slider").slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true 
+            });
+
+            $('.parallax').parallax();
+
+        });
+
+        function openWhatsApp() {
+            const phone = "549123456789";
+            const message = "Hola, me gustaría contactarme contigo.";
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
+        }
+    </script>
+</body>
+</html>

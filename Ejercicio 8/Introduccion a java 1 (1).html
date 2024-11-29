@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Introducción a JavaScript </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        const primerNombre = "TuNombre"; 
+        const apellido = "TuApellido";   
+
+        $(document).ready(function() {
+            alert("Hola, " + primerNombre + " " + apellido);
+
+            const lado1 = parseFloat(prompt("Ingresa el primer lado del rectángulo:"));
+            const lado2 = parseFloat(prompt("Ingresa el segundo lado del rectángulo:"));
+            const perimetro = 2 * (lado1 + lado2);
+            const area = lado1 * lado2;
+            
+            $("#resultado").append("<p>El perímetro del rectángulo es: " + perimetro + "</p>");
+            $("#resultado").append("<p>El área del rectángulo es: " + area + "</p>");
+
+            const ladoA = parseFloat(prompt("Ingresa el primer lado del triángulo:"));
+            const ladoB = parseFloat(prompt("Ingresa el segundo lado del triángulo:"));
+            const ladoC = parseFloat(prompt("Ingresa el tercer lado del triángulo:"));
+            let tipoTriangulo;
+            
+            if (ladoA === ladoB && ladoB === ladoC) {
+                tipoTriangulo = "equilátero";
+            } else if (ladoA === ladoB || ladoB === ladoC || ladoA === ladoC) {
+                tipoTriangulo = "isósceles";
+            } else {
+                tipoTriangulo = "escaleno";
+            }
+            $("#resultado").append("<p>El triángulo es " + tipoTriangulo + ".</p>");
+
+            const numeros = [];
+            for (let i = 1; i <= 5; i++) {
+                numeros.push(parseFloat(prompt("Ingresa el número " + i + ":")));
+            }
+            const mayor = Math.max(...numeros);
+            const menor = Math.min(...numeros);
+            $("#resultado").append("<ul><li>El número mayor es: " + mayor + "</li>");
+            $("#resultado").append("<li>El número menor es: " + menor + "</li></ul>");
+
+            const numeroAleatorio = Math.floor(Math.random() * 11);
+            let numeroUsuario;
+            do {
+                numeroUsuario = parseInt(prompt("Adivina el número entre 0 y 10:"));
+                if (numeroUsuario < numeroAleatorio) {
+                    alert("Tu número ingresado es menor que el número a adivinar.");
+                } else if (numeroUsuario > numeroAleatorio) {
+                    alert("Tu número ingresado es mayor que el número a adivinar.");
+                }
+            } while (numeroUsuario !== numeroAleatorio);
+            alert("¡Felicidades! Has adivinado el número.");
+
+            $("#btnSaludo").click(function() {
+                const nombreUsuario = prompt("Por favor, ingresa tu nombre:");
+                alert("¡Hola, " + nombreUsuario + "!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="resultado"></div>
+    <button id="btnSaludo">Saludar</button>
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* Ejercicio 1 */
+.ejercicio1 {
+    background-color: lightblue;
+    margin: 20px;
+    padding: 15px;
+}
+
+/* Ejercicio 2 */
+.ejercicio2 {
+    background-image: url('Libertadores de america.jpg'); /* Cambia 'imagen.jpg' por tu imagen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Ejercicio 3 */
+.ejercicio3 {
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+/* Ejercicio 4 */
+.ejercicio4 p {
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 10px; /* Evitar que el contenido toque los bordes */
+}
+
+/* Ejercicio 5 */
+.ejercicio5 div {
+    background-color: yellow;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Ejercicio 6 */
+.ejercicio6 {
+    border: 5px double purple;
+    background-color: gold;
+    margin: 40px;
+}
+
+/* Ejercicio 7 */
+.ejercicio7 {
+    background-image: url(''); /* Cambia 'imagen.jpg' por tu imagen */
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+/* Ejercicio 8 */
+.ejercicio8 {
+    background-image: url('75848-h3.jpg'); /* Cambia 'imagen.jpg' por tu imagen */
+    background-size: 50% auto;
+    background-repeat: repeat-y;
+}
+
+/* Ejercicio 9 */
+.ejercicio9 {
+    background-color: lightgray;
+    background-image: url('Libertadores de america.jpg'); /* Cambia 'imagen-chica.jpg' por tu imagen */
+    background-position: right;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.ejercicio9 button {
+    background-color: lightblue;
+    margin: 5px 0;
+}
+
+/* Ejercicio 10 */
+.ejercicio10 {
+    width: 50%;
+    border: 3px dotted green;
+    padding: 25px;
+}

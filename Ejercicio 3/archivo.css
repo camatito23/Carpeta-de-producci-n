@@ -1,0 +1,19 @@
+h1 {
+    color: red; 
+}
+section p:first-of-type {   
+    color:orangered;
+}
+section p:nth-of-type(2){
+    color: green;
+}
+section p:nth-of-type(3){
+    color: brown;
+}
+h2 {
+    color: blueviolet;
+}
+h3 {
+    color: rgba(1, 225, 255, 0.87); 
+}
+
